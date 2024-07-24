@@ -60,8 +60,8 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }: {
           </div>
           <Link href='/'>
             <Image
-              className='w-full h-14'
-              src='/assets/watermark.png' width={90} height={36} alt='' />
+              className='w-full h-24'
+              src='/assets/watermark.png' width={100} height={70} alt='' />
           </Link>
           <div className='flex flex-col gap-y-8'>
             {links.map((link, index) => {
