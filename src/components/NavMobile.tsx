@@ -9,7 +9,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './ui/button';
 
-const NavMobile = ({ containerStyles , iconStyles, linkStyles }) => {
+const NavMobile = ({ containerStyles, iconStyles, linkStyles }: {
+  containerStyles: string;
+  iconStyles: string;
+  linkStyles: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
@@ -45,38 +49,38 @@ const NavMobile = ({ containerStyles , iconStyles, linkStyles }) => {
         onClick={() => setIsOpen(!isOpen)}
         className="cursor-pointer outline-none"
       >
-          <RiMenu2Line className="text-3xl text-white transition-all duration-200" />
+        <RiMenu2Line className="text-3xl text-white transition-all duration-200" />
       </div>
-        <aside className={`${isOpen ? '-right-0' : '-right-full'} bg-black fixed x-20 w-full p-10 top-0 bottom-0 transition-all duration-500 `}>
-            mobile Nav
-        
+      <aside className={`${isOpen ? '-right-0' : '-right-full'} bg-black fixed x-20 w-full p-10 top-0 bottom-0 transition-all duration-500 `}>
+        mobile Nav
+
         <div className='flex flex-col items-center justify-between h-full'>
-        <div onClick={() => setIsOpen(false)} className={`'hidden xl:block cursor-pointer text-4xl text-white absolute w-10 h-10 left-8 bg-green flex items-center justify-center'`}>
-        <IoCloseOutline   />
-        </div>
-        <Link href='/'>
-            <Image 
-            className='w-full h-14'
-            src='/assets/watermark.png' width={90} height={36} alt='' />
-        </Link>
-        <div className='flex flex-col gap-y-8'>
-        {links.map((link, index) => {
-                return <ScrollLink key={index} to={link.path} spy={true} smooth={false}
-                    offset={link.offset} duration={500} className='flex items-center gap-x-3'>
-                        <div className={`${iconStyles}`}>{link.icon}</div>
-                        <div className={`${linkStyles}`}>{link.name}</div>
-                    </ScrollLink>
+          <div onClick={() => setIsOpen(false)} className={`'hidden xl:block cursor-pointer text-4xl text-white absolute w-10 h-10 left-8 flex items-center justify-center'`}>
+            <IoCloseOutline />
+          </div>
+          <Link href='/'>
+            <Image
+              className='w-full h-14'
+              src='/assets/watermark.png' width={90} height={36} alt='' />
+          </Link>
+          <div className='flex flex-col gap-y-8'>
+            {links.map((link, index) => {
+              return <ScrollLink key={index} to={link.path} spy={true} smooth={false}
+                offset={link.offset} duration={500} className='flex items-center gap-x-3'>
+                <div className={`${iconStyles}`}>{link.icon}</div>
+                <div className={`${linkStyles}`}>{link.name}</div>
+              </ScrollLink>
             })}
-        </div>
-        <ScrollLink to='reservation' smooth offset={-150}>
+          </div>
+          <ScrollLink to='reservation' smooth offset={-150}>
             <Button variant='orange'>
-                Book a table
+              Book a table
             </Button>
-        </ScrollLink>
+          </ScrollLink>
         </div>
 
-        </aside>
-        </div>
+      </aside>
+    </div>
   );
 };
 
