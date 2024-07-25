@@ -60,7 +60,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }: {
           </div>
           <Link href='/'>
             <Image
-              className='w-full h-24'
+              className='w-full h-28'
               src='/assets/watermark.png' width={100} height={70} alt='' />
           </Link>
           <div className='flex flex-col gap-y-8'>
@@ -74,11 +74,10 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }: {
           </div>
           <ScrollLink to='reservation' smooth offset={-150}>
             <Button variant='orange'>
-              Book a table
+              Login
             </Button>
           </ScrollLink>
         </div>
-
       </aside>
     </div>
   );

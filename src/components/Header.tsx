@@ -27,20 +27,20 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`${active ? 'bg-black-heavy' : 'bg-none'} fixed top-0 w-full z-50 left-0 right-0 transition-all duration-200`}>
+    <header className={`${active ? 'bg-black-heavy' : 'bg-none'} fixed top-0 w-full z-50 h-[85px] flex items-center left-0 right-0 transition-all duration-200`}>
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href='/' passHref>
             <Image
-              className="w-full h-24"
+              className="w-full h-28"
               src='/assets/watermark.png' width={100} height={40} alt="Logo" />
           </Link>
           {/* Nav */}
           <Nav containerStyles='hidden xl:flex h-12  xl:flex-row items-center xl:gap-x-12 text-white' linkStyles='capitalize' />
           {/* Button */}
           <ScrollLink className="max-xl:hidden" to='reservation' smooth={true}>
-            <Button variant='orange' size='sm'>Book a table</Button>
+            <Button variant='orange' size='sm'>Login</Button>
           </ScrollLink>
           {/* Mobile Nav */}
           <NavMobile containerStyles='xl:hidden ' iconStyles='text-3xl' linkStyles='uppercase' />
