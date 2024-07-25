@@ -29,15 +29,13 @@ const Footer = () => {
                 Company
               </h4>
               <ul className='flex flex-col gap-y-6 text-sm'>
-                <li>
-                  {
-                    company.map((item, index) => (
-                      <li className="text-[#f2f2f2] text-sm pb-4 hover:underline hover:text-[#f89222] cursor-pointer" key={index}>
-                        <Link href={item.path}>{item.name}</Link>
-                      </li>
-                    ))
-                  }
-                </li>
+                {
+                  company.map((item, index) => (
+                    <li className="text-[#f2f2f2] text-sm pb-4 hover:underline hover:text-[#f89222] cursor-pointer" key={index}>
+                      <Link href={item.path}>{item.name}</Link>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
             <div>
@@ -45,15 +43,13 @@ const Footer = () => {
                 Support
               </h4>
               <ul className='flex flex-col gap-y-6 text-sm'>
-                <li>
-                  {
-                    support.map((item, index) => (
-                      <li className="text-[#f2f2f2] text-sm pb-4 hover:underline hover:text-[#f89222] cursor-pointer" key={index}>
-                        <Link href={item.path}>{item.name}</Link>
-                      </li>
-                    ))
-                  }
-                </li>
+                {
+                  support.map((item, index) => (
+                    <li className="text-[#f2f2f2] text-sm pb-4 hover:underline hover:text-[#f89222] cursor-pointer" key={index}>
+                      <Link href={item.path}>{item.name}</Link>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
 
@@ -63,19 +59,17 @@ const Footer = () => {
                 Contact
               </h4>
               <ul className='flex flex-col gap-y-6 text-sm'>
-                <li>
-                  {
-                    contact.map((item, index) => (
-                      <li className="text-[#f2f2f2] text-sm pb-4 hover:underline hover:text-[#f89222] cursor-pointer" key={index}>
-                        <Link href={item.path}>
-                          <span className='flex gap-x-4 '>
-                            <p className='  text-white hover:text-[#f89222]'>{item.icon} </p>
-                            <p className='  text-white hover:text-[#f89222]'>{item.title}</p>
-                          </span></Link>
-                      </li>
-                    ))
-                  }
-                </li>
+                {
+                  contact.map((item, index) => (
+                    <li className="text-[#f2f2f2] text-sm pb-4 hover:underline hover:text-[#f89222] cursor-pointer" key={index}>
+                      <Link href={item.path}>
+                        <span className='flex gap-x-4 '>
+                          <p className='  text-white hover:text-[#f89222]'>{item.icon} </p>
+                          <p className='  text-white hover:text-[#f89222]'>{item.title}</p>
+                        </span></Link>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
 
@@ -84,19 +78,17 @@ const Footer = () => {
                 Socials
               </h4>
               <ul className='flex flex-col gap-y-6 text-sm'>
-                <li>
-                  {
-                    socialLink.map((item, index) => (
-                      <li className="text-[#f2f2f2] text-sm pb-4 hover:underline hover:text-[#f89222] cursor-pointer" key={index}>
-                        <Link href={item.path}>
-                          <span className='flex gap-x-4 '>
-                            <p className='  text-white hover:text-[#f89222]'>{item.icon} </p>
-                            <p className='  text-white hover:text-[#f89222]'>{item.title}</p>
-                          </span></Link>
-                      </li>
-                    ))
-                  }
-                </li>
+                {
+                  socialLink.map((item, index) => (
+                    <li className="text-[#f2f2f2] text-sm pb-4 hover:underline hover:text-[#f89222] cursor-pointer" key={index}>
+                      <Link href={item.path}>
+                        <span className='flex gap-x-4 '>
+                          <p className='  text-white hover:text-[#f89222]'>{item.icon} </p>
+                          <p className='  text-white hover:text-[#f89222]'>{item.title}</p>
+                        </span></Link>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </div>

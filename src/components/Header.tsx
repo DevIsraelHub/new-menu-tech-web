@@ -12,13 +12,17 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setActive(window.scrollY > 100);
+      window.scrollY > 100 ? setActive(true) : setActive(false);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+    }
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('scroll', handleScroll);
+      }
     };
   }, []);
 
