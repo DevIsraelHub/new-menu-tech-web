@@ -9,7 +9,7 @@ import { Button } from "./ui/button"
 const About = () => {
 
   return (
-    <section className="w-full pt-12 gap-x-[74px] p-8 md:p-12 xl:p-0 lg:p-0 items-center" id="about">
+    <section className="w-full pt-12 gap-x-[74px] p-4 md:p-12 xl:p-0 lg:p-0 items-center" id="about">
       {/* text */}
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 px-12">
 
@@ -20,7 +20,7 @@ const About = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="xl:pl-[100px]">
           <h1 className="text-orange-500  w-full max-sm:text-5xl mb-9">
-            About <br /> Menu Tech
+            About Menu Tech
           </h1>
           <p className="mb-8">
             Mauris nam et ipsum ipsum in. Risus nullam in sit mi est justo at fringilla. Consequat ac fringilla quis enim, sit ipsum. Laoreet eget metus morbi convallis gravida elementum facilisis. Neque enim quis fusce amet. Pellentesque netus vel eu
