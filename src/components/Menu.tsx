@@ -47,28 +47,28 @@ const Services = () => {
   ];
 
   return (
-    <section className="relative bg-menu py-12" id='menu'>
+    <section className="relative bg-menu py-12 md:py-28" id='menu'>
       <div className="container mx-auto text-center w-full">
         <motion.div
-          variants={fadeIn('left', 0.3)}
+          variants={fadeIn('left', 0.05)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.2 }}
-          className=" mx-auto w-[50em] xl:text-right"
+          viewport={{ once: true, amount: 0.05 }}
+          className=" mx-auto w-full xl:w-[50em] xl:text-right"
         >
-          <h2 className="mb-3 relative">Restaurants For You</h2>
-          <Link href="/" className="text-orange flex xl:justify-end items-center -scroll-mb-16">
+          <h2 className="mb-3 relative">Services We Offer</h2>
+          <Link href="/" className="text-orange flex justify-end items-center -scroll-mb-16 mb-6 md:mb-8">
             View All
             <IoIosArrowRoundForward className="text-3xl" />
           </Link>
         </motion.div>
         <motion.div
-          variants={fadeIn('up', 0.4)}
+          variants={fadeIn('up', 0.1)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.2 }} className="grid grid-cols-1 gap-[50px] gap-y-[60px] md:grid-cols-2 md:gap-[15px] xl:grid-cols-3">
+          viewport={{ once: true, amount: 0.1 }} className="grid grid-cols-1 gap-[50px] gap-y-[60px] md:grid-cols-2 md:gap-[15px] xl:grid-cols-3">
           {services.map((item, index) => (
-            <div key={index} className=" bg-white hover:bg-body  hover:transition-colors hover:duration-500 shadow-xl lg mx-auto grid max-w-[30em] h-[20em] border-4 border-r-white xl:mx-0 group">
+            <div key={index} className=" bg-white hover:bg-body  hover:transition-colors hover:duration-500 shadow-xl lg mx-auto grid max-w-[30em] h-[20em] border rounded-xl xl:mx-0 group">
               <div className="flex justify-center items-center p-4">
                 {item.icon}
               </div>

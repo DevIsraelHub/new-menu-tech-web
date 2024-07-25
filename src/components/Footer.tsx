@@ -97,7 +97,7 @@ const Footer = () => {
         {/* copywright text */}
         <div className='py-4 border-t border-white/10'>
           <p className='text-white/60 text-center text-sm'>
-            Copywright&copy; W&appos;Food 20
+            Copywright&copy; Menu Tech | All right reserved.
           </p>
         </div>
       </div>

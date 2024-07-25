@@ -11,10 +11,10 @@ const DynamicMap = dynamic(() => import('./MapComponent'), {
 const MenuMap = () => {
   return (
     <motion.section
-      variants={fadeIn('up', 0.2)}
+      variants={fadeIn('up', 0.1)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
       className='relative xl:after:w-full xl:after:h-[240px]'
       id='contact'
     >

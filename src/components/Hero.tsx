@@ -16,10 +16,10 @@ const Hero = () => {
         <div className="flex items-center xl:h-[960px]">
           {/* Text */}
           <motion.div
-            variants={fadeIn('down', 0.2)}
+            variants={fadeIn('down', 0.1)}
             initial='hidden'
             whileInView='show'
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="w-full xl:max-w-[550px] text-center xl:text-left">
             <h1
               className='text-white mb-7'
@@ -42,23 +42,23 @@ const Hero = () => {
           </motion.div>
           {/* Image */}
           <motion.div
-            variants={fadeIn('up', 0.8)}
+            variants={fadeIn('up', 0.4)}
             initial='hidden'
             whileInView='show'
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.2 }}
             className='hidden xl:flex xl:absolute xl:top-[100px] xl:right-0'>
             <Image
               src="/assets/Group 13.png"
               width={786}
               height={682}
-              alt="Plate of food"
+              alt="restaurant"
             />
           </motion.div>
         </div>
       </div>
       {/* Coffee Image */}
       <motion.div
-        variants={fadeIn('up', 1)}
+        variants={fadeIn('up', 0.1)}
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.1 }}

@@ -17,15 +17,14 @@ const links = [
     path: 'about',
     name: 'about',
     offset: -50
-
   },
   {
-    path: 'contact',
-    name: 'contact',
+    path: 'features',
+    name: 'features',
     offset: -50
-
-  }
+  },
 ]
+
 const Nav = (containerStyles: any, linkStyles: any) => {
   return (
     <nav className={`${containerStyles} hidden xl:flex items-center xl:flex-row xl:gap-x-12 text-white gap-x-12 h-12 `}>

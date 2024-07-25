@@ -71,7 +71,7 @@
     @apply font-lora font-bold;
   }
   h1{
-    @apply text-[62px] leading-[84px];
+    @apply text-[50px] sm:text-[62px] leading-[60px] sm:leading-[84px];
   }
   h2{
     @apply text-[32px] leading-[46px];

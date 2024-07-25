@@ -40,7 +40,7 @@ const MapComponent = () => {
     <MapContainer
       center={[34.052235, -118.243683]}
       zoom={isMobile ? 10 : 12}
-      className={`${isMobile ? 'h-[200px]' : 'h-[500px]'} border-4 border-body z-10`}
+      className={`${isMobile ? 'h-[200px]' : 'h-[500px]'} border z-10`}
       zoomControl={false}
     >
       <TileLayer
