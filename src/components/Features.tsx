@@ -36,7 +36,7 @@ const Features = () => {
   return (
     <section className="flex items-center justify-center w-full gap-x-[74px] p-8 md:p-12 lg:px-24" id="features">
       {/* Dynamic content */}
-      <div className="grid grid-cols-1 mt-16 gap-y-12 mb-32">
+      <div className="grid grid-cols-1 mt-16 gap-y-12 mb-2">
         {features.map((feature, index) => (
           <div key={index} className="grid grid-cols-1 lg:grid-cols-2 items-center">
             <motion.div
@@ -69,10 +69,10 @@ const Features = () => {
                 {feature.description}
               </p>
               <div className="flex justify-center gap-x-10">
-                <Button className="bg-black-heavy mb-10 rounded-br-[20px] rounded-tl-[20px]">
+                <Button className="bg-black-heavy mb-10 hover:bg-gray-hover rounded-br-[20px] rounded-tl-[20px]">
                   Menu
                 </Button>
-                <Button className="bg-orange mb-10 rounded-br-[20px] rounded-tl-[20px]">
+                <Button className="bg-orange mb-10 hover:bg-orange-hover rounded-br-[20px] rounded-tl-[20px]">
                   Get Started
                 </Button>
               </div>

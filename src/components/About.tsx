@@ -19,8 +19,8 @@ const About = () => {
           whileInView={'show'}
           viewport={{ once: true, amount: 0.2 }}
           className="xl:pl-[100px]">
-          <h1 className="text-orange-500 mb-9">
-            About Menu Tech
+          <h1 className="text-orange-500  w-full max-sm:text-5xl mb-9">
+            About <br /> Menu Tech
           </h1>
           <p className="mb-8">
             Mauris nam et ipsum ipsum in. Risus nullam in sit mi est justo at fringilla. Consequat ac fringilla quis enim, sit ipsum. Laoreet eget metus morbi convallis gravida elementum facilisis. Neque enim quis fusce amet. Pellentesque netus vel eu
@@ -28,7 +28,7 @@ const About = () => {
           <p className="mb-9">
             posuere ultrices facilisi. Senectus velit lobortis velit arcu varius lectus mattis. Dictum aenean duis aliquet Tortor purus egestas urna scelerisque vel ornare lectus ultricies. Nisi, eu ut ultricies enim enim amet porttitor. Volutpat ac tellus volutpat eget volutpat orci enim, ut a. Turpis adipiscing eleifend dignissim viverra euismod ultrices.
           </p>
-          <Button className="mb-10">
+          <Button className="mb-10 bg-orange hover:bg-orange-hover">
             Read more
           </Button>
         </motion.div>
