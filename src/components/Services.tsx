@@ -10,7 +10,7 @@ const Services = () => {
   const services = [
     {
       icon: <Truck size={40} className="text-orange " />,
-      title: 'Order Online',
+      title: 'Online Ordering ',
       description: 'Integrate seamless online ordering for takeout and delivery.',
       textColor: 'text-[#f2f2f2]',
     },

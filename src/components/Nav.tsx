@@ -3,24 +3,24 @@ import { Link as ScrollLink } from 'react-scroll';
 const links = [
   {
     path: 'home',
-    name: 'home',
+    name: 'Home',
     offset: -50
 
   },
   {
     path: 'menu',
-    name: 'menu',
+    name: 'Contact',
     offset: -50
 
   },
   {
     path: 'about',
-    name: 'about',
+    name: 'About',
     offset: -50
   },
   {
     path: 'features',
-    name: 'features',
+    name: 'Features',
     offset: -50
   },
 ]

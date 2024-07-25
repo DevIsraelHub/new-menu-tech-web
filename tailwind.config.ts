@@ -26,8 +26,9 @@ const config: Config = {
       green: { DEFAULT: '#539592', hover: '#40807d' },
       black: { DEFAULT: '#273029', heavy: '#1b211c' },
       orange: { DEFAULT: '#f2994a', hover: '#da863c' },
+      gray: {DEFAULT: '#273029', hover: '#757575'},
       outline: '#f1f1f1',
-      pink: '#fa5a5a', // Corrected the pink color value
+      pink: '#fa5a5a', 
     },
     extend: {
       fontFamily: {
