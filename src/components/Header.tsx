@@ -4,11 +4,13 @@ import Nav from "./Nav";
 import NavMobile from "./NavMobile";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from 'next/router'; // Ensure correct import
 import { Button } from "./ui/button";
 import { Link as ScrollLink } from 'react-scroll';
 
 const Header = () => {
   const [active, setActive] = useState(false);
+   // Use the router from next/router
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,10 +39,11 @@ const Header = () => {
               src='/assets/watermark.png' width={100} height={40} alt="Logo" />
           </Link>
           {/* Nav */}
-          <Nav containerStyles='hidden xl:flex h-12  xl:flex-row items-center xl:gap-x-12 text-white' linkStyles='capitalize' />
+          <Nav containerStyles='hidden xl:flex h-12  xl:flex-row items-center xl:gap-x-12 text-white' linkStyles='capitalize'  />
           {/* Button */}
-          <ScrollLink className="max-xl:hidden" to='reservation' smooth={true}>
-            <Button variant='orange' size='sm'>Login</Button>
+          <ScrollLink className="  max-xl:hidden" to='/Form' smooth={true}>
+              <Link href='/Form' className="cursor-pointer">            <Button variant='orange'  size='sm'>Login</Button>
+              </Link>
           </ScrollLink>
           {/* Mobile Nav */}
           <NavMobile containerStyles='xl:hidden ' iconStyles='text-3xl' linkStyles='uppercase' />

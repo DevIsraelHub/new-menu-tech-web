@@ -47,7 +47,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="relative bg-menu py-12 md:py-28" id='menu'>
+    <section className="relative bg-menu py-12 md:py-28" id='services'>
       <div className="container mx-auto text-center w-full">
         <motion.div
           variants={fadeIn('left', 0.05)}
