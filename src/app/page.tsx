@@ -8,9 +8,9 @@ import About from "@/components/About";
 import CursorFollower from "./cursor";
 export default function Home() {
   return (
-    <main className="w-full max-w-[1440px] bg-white mx-auto overflow-hidden ">
-      <CursorFollower />
+    <main className="w-full max-w-[1440px] bg-white mx-auto overflow-hidden " id="/">
       <Header />
+      <CursorFollower />
       <Hero />
       <Services />
       <About />
