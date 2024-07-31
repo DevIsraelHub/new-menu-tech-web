@@ -10,7 +10,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 const Header = () => {
   const [active, setActive] = useState(false);
-   // Use the router from next/router
+  // Use the router from next/router
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,14 +39,15 @@ const Header = () => {
               src='/assets/watermark.png' width={100} height={40} alt="Logo" />
           </Link>
           {/* Nav */}
-          <Nav containerStyles='hidden xl:flex h-12  xl:flex-row items-center xl:gap-x-12 text-white' linkStyles='capitalize'  />
+          <Nav containerStyles='hidden xl:flex h-12  xl:flex-row items-center xl:gap-x-12 text-white' linkStyles='capitalize' />
           {/* Button */}
-          <ScrollLink className="  max-xl:hidden" to='/Form' smooth={true}>
-              <Link href='/Form' className="cursor-pointer">            <Button variant='orange'  size='sm'>Login</Button>
-              </Link>
-          </ScrollLink>
+          <Button variant='orange' size='sm' asChild>
+            <Link className="max-xl:hidden" href='/Form'>
+              Login
+            </Link>
+          </Button>
           {/* Mobile Nav */}
-          <NavMobile containerStyles='xl:hidden ' iconStyles='text-3xl' linkStyles='uppercase' />
+          <NavMobile containerStyles='xl:hidden' iconStyles='text-3xl' linkStyles='uppercase' />
         </div>
       </div>
     </header>

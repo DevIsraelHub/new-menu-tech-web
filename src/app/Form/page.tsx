@@ -1,7 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Footer from "@/components/Footer";
-import Header from "@/components/Signup/Header";
 import SignUp from "@/components/Signup";
 import LogIn from "@/components/LogIn";
 
@@ -19,7 +17,7 @@ export default function Form() {
 
   return (
     <main className="w-full bg-white mx-auto overflow-hidden">
-      
+
       {showSignUp ? (
         <SignUp onToggle={() => setShowSignUp(false)} />
       ) : (

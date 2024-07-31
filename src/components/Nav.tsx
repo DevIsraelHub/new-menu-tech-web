@@ -11,25 +11,28 @@ const links = [
   { path: 'contact', name: 'Contact', offset: -50 },
 ];
 
-const Nav = ({ containerStyles, linkStyles, }) => {
+const Nav = ({ containerStyles, linkStyles, }:
+  {
+    containerStyles?: string,
+    linkStyles?: string
+  }
+) => {
 
-  
+
   return (
     <nav className={`${containerStyles} hidden xl:flex items-center xl:flex-row xl:gap-x-12 text-white gap-x-12 h-12`}>
       {links.map((link, index) => (
-          <ScrollLink
-            key={index}
-            to={link.path}
-            spy={true}
-            smooth={true}
-            offset={link.offset}
-            duration={500}
-            className={`${linkStyles}`}
-          >
-            {link.name}
-          </ScrollLink>
-       
-          
+        <ScrollLink
+          key={index}
+          to={link.path}
+          spy={true}
+          smooth={true}
+          offset={link.offset}
+          duration={500}
+          className={`${linkStyles}`}
+        >
+          {link.name}
+        </ScrollLink>
       ))}
     </nav>
   );

@@ -56,9 +56,8 @@ const NavMobile = ({
         <RiMenu2Line className={`text-3xl text-white transition-all duration-200 ${iconStyles}`} />
       </div>
       <aside
-        className={`${
-          isOpen ? 'right-0' : '-right-full'
-        } z-10 bg-black fixed w-full p-10 top-0 bottom-0 transition-all duration-500`}
+        className={`${isOpen ? 'right-0' : '-right-full'
+          } z-10 bg-black fixed w-full p-10 top-0 bottom-0 transition-all duration-500`}
       >
         <div className="flex flex-col items-center justify-between h-full">
           <div
@@ -92,9 +91,11 @@ const NavMobile = ({
               </ScrollLink>
             ))}
           </div>
-          <Link href="/Form" onClick={() => setIsOpen(false)}>
-            <Button variant="orange">Login</Button>
-          </Link>
+          <Button variant="orange" asChild>
+            <Link href="/Form" onClick={() => setIsOpen(false)}>
+              Login
+            </Link>
+          </Button>
         </div>
       </aside>
     </div>
