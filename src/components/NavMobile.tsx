@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import { RiMenu2Line, RiHomeFill } from 'react-icons/ri';
 import { BiSolidFoodMenu } from 'react-icons/bi';
@@ -9,7 +9,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './ui/button';
 
-const NavMobile = ({ containerStyles, iconStyles, linkStyles }: {
+const NavMobile = ({
+  containerStyles,
+  iconStyles,
+  linkStyles,
+}: {
   containerStyles: string;
   iconStyles: string;
   linkStyles: string;
@@ -20,63 +24,78 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }: {
     {
       icon: <RiHomeFill />,
       path: 'home',
-      name: 'home',
-      offset: 0,
+      name: 'Home',
+      offset: -50,
     },
     {
       icon: <BiSolidFoodMenu />,
-      path: 'menu',
-      name: 'menu',
-      offset: 0,
+      path: 'services',
+      name: 'Services',
+      offset: -50,
     },
     {
       icon: <FaUsers />,
       path: 'about',
-      name: 'about',
-      offset: 0,
+      name: 'About',
+      offset: -50,
     },
     {
       icon: <RiHomeFill />,
       path: 'contact',
-      name: 'contact',
-      offset: 0,
+      name: 'Contact',
+      offset: -50,
     },
   ];
 
   return (
-    <div className={`${containerStyles}`}>
+    <div className={containerStyles}>
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="cursor-pointer outline-none"
       >
-        <RiMenu2Line className="text-3xl text-white transition-all duration-200" />
+        <RiMenu2Line className={`text-3xl text-white transition-all duration-200 ${iconStyles}`} />
       </div>
-      <aside className={`${isOpen ? '-right-0' : '-right-full'} bg-black fixed x-20 w-full p-10 top-0 bottom-0 transition-all duration-500 `}>
-        mobile Nav
-
-        <div className='flex flex-col items-center justify-between h-full'>
-          <div onClick={() => setIsOpen(false)} className={`'hidden xl:block cursor-pointer text-4xl text-white absolute w-10 h-10 left-8 flex items-center justify-center'`}>
+      <aside
+        className={`${isOpen ? 'right-0' : '-right-full'
+          } z-10 bg-black fixed w-full p-10 top-0 bottom-0 transition-all duration-500`}
+      >
+        <div className="flex flex-col items-center justify-between h-full">
+          <div
+            onClick={() => setIsOpen(false)}
+            className="cursor-pointer text-4xl text-white absolute top-5 right-5 flex items-center justify-center"
+          >
             <IoCloseOutline />
           </div>
-          <Link href='/'>
+          <Link href="/" onClick={() => setIsOpen(false)}>
             <Image
-              className='w-full h-28'
-              src='/assets/watermark.png' width={100} height={70} alt='' />
+              className="w-full h-28"
+              src="/assets/watermark.png"
+              width={100}
+              height={70}
+              alt=""
+            />
           </Link>
-          <div className='flex flex-col gap-y-8'>
-            {links.map((link, index) => {
-              return <ScrollLink key={index} to={link.path} spy={true} smooth={false}
-                offset={link.offset} duration={500} className='flex items-center gap-x-3'>
-                <div className={`${iconStyles}`}>{link.icon}</div>
-                <div className={`${linkStyles}`}>{link.name}</div>
+          <div className="flex flex-col gap-y-8">
+            {links.map((link, index) => (
+              <ScrollLink
+                key={index}
+                to={link.path}
+                smooth={true}
+                offset={link.offset}
+                duration={500}
+                onClick={() => setIsOpen(false)}
+                className={`${linkStyles} flex items-center gap-x-2`}
+              >
+                {link.icon}
+                {link.name}
               </ScrollLink>
-            })}
+            ))}
           </div>
-          <ScrollLink to='reservation' smooth offset={-150}>
-            <Button variant='orange'>
+          <Button variant="orange" asChild>
+            <Link href="/Form" onClick={() => setIsOpen(false)}>
               Login
-            </Button>
-          </ScrollLink>
+            </Link>
+          </Button>
         </div>
       </aside>
     </div>

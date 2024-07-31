@@ -27,6 +27,8 @@ const config: Config = {
       black: { DEFAULT: '#273029', heavy: '#1b211c' },
       orange: { DEFAULT: '#f2994a', hover: '#da863c' },
       gray: {DEFAULT: '#273029', hover: '#757575'},
+      blue: {DEFAULT: '#0000EE', hover: '#1E90FF'},
+
       outline: '#f1f1f1',
       pink: '#fa5a5a', 
     },
