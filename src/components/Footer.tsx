@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { company, contact, socialLink, support } from "./index";
+import { company, contact, socialLink, support } from "@/components/index";
 
 const Footer = () => {
   return (

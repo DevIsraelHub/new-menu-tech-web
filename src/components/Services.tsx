@@ -1,10 +1,9 @@
 'use client';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { Truck, Menu, HelpCircle, Users, Table, BarChart2 } from 'lucide-react';
 import Link from 'next/link';
 import { IoIosArrowRoundForward } from 'react-icons/io';
-import { fadeIn } from './variants';
+import { fadeIn } from '@/components/variants';
 
 const Services = () => {
   const services = [

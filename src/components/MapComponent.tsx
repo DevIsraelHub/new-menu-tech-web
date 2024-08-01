@@ -7,19 +7,19 @@ import Image from 'next/image';
 
 const markers = [
   {
-    position: [34.052235, -118.243683],
+    position: [6.5244, 3.3792], // Coordinates for Lagos, Nigeria
     title: 'Location 1',
     subtle: 'lorem ipsum dolor sit amet, consectetur adipising wlit.',
     image: '/1.png'
   },
   {
-    position: [33.9748, -118.3356],
+    position: [9.0820, 8.6753], // Coordinates for Abuja, Nigeria
     title: 'Location 2',
     subtle: 'lorem ipsum dolor sit amet, consectetur adipising wlit.',
     image: '/2.png'
   },
   {
-    position: [34.0211, -118.3965],
+    position: [7.3775, 3.9470], // Coordinates for Ibadan, Nigeria
     title: 'Location 3',
     subtle: 'lorem ipsum dolor sit amet, consectetur adipising wlit.',
     image: '/3.png'
@@ -44,8 +44,7 @@ const MapComponent = () => {
       zoomControl={false}
     >
       <TileLayer
-        attribution='&copy; 
-        <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
       />
       {markers.map((marker, index) => (
