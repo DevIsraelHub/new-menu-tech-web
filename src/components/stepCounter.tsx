@@ -1,6 +1,8 @@
 import React from 'react';
 
-const StepCounter = ({ currentStep, totalSteps }) => {
+const StepCounter = ({ currentStep, totalSteps } 
+  :{currentStep: Number;
+   totalSteps: Number}) => {
   
 
   return (
