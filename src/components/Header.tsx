@@ -1,16 +1,14 @@
 'use client'
 import React, { useState, useEffect } from "react";
-import Nav from "./Nav";
-import NavMobile from "./NavMobile";
+import Nav from "@/components/Nav";
+import NavMobile from "@/components/NavMobile";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from 'next/router'; // Ensure correct import
-import { Button } from "./ui/button";
-import { Link as ScrollLink } from 'react-scroll';
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [active, setActive] = useState(false);
-  // Use the router from next/router
+   // Use the router from next/router
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,15 +37,17 @@ const Header = () => {
               src='/assets/watermark.png' width={100} height={40} alt="Logo" />
           </Link>
           {/* Nav */}
-          <Nav containerStyles='hidden xl:flex h-12  xl:flex-row items-center xl:gap-x-12 text-white' linkStyles='capitalize' />
+          <Nav />
           {/* Button */}
-          <Button variant='orange' size='sm' asChild>
-            <Link className="max-xl:hidden" href='/Form'>
-              Login
-            </Link>
-          </Button>
+          
+                        <Button variant='orange'  size='sm' asChild>
+                          <Link href='/LogIn' className="cursor-pointer"> 
+                           Login
+                           </Link>
+                           </Button>
+              
           {/* Mobile Nav */}
-          <NavMobile containerStyles='xl:hidden' iconStyles='text-3xl' linkStyles='uppercase' />
+          <NavMobile containerStyles='xl:hidden ' iconStyles='text-3xl' linkStyles='uppercase' />
         </div>
       </div>
     </header>

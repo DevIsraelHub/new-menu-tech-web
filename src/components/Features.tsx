@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { fadeIn } from "./variants"
-import { Button } from "./ui/button"
+import { fadeIn } from "@/components/variants"
+import { Button } from "@/components/ui/button"
 
 const Features = () => {
   const features = [

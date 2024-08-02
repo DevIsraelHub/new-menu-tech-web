@@ -2,9 +2,9 @@
 
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { fadeIn } from './variants';
+import { fadeIn } from '@/components/variants';
 
-const DynamicMap = dynamic(() => import('./MapComponent'), {
+const DynamicMap = dynamic(() => import('@/components/MapComponent'), {
   ssr: false,
 });
 
