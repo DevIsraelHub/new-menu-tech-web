@@ -37,7 +37,7 @@ const Header = () => {
               src='/assets/watermark.png' width={100} height={40} alt="Logo" />
           </Link>
           {/* Nav */}
-          <Nav containerStyles='hidden xl:flex h-12  xl:flex-row items-center xl:gap-x-12 text-white' linkStyles='capitalize'  />
+          <Nav />
           {/* Button */}
           
                         <Button variant='orange'  size='sm' asChild>
