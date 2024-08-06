@@ -7,7 +7,7 @@ import { IoCloseOutline } from 'react-icons/io5';
 import { Link as ScrollLink } from 'react-scroll';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from './ui/button';
+import { Button } from '@/components/ui/button';
 
 const NavMobile = ({
   containerStyles,

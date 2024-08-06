@@ -1,9 +1,9 @@
 import React from 'react';
 
-const StepCounter = ({ currentStep, totalSteps }) => {
-  const calculateWidth = () => {
-    return (currentStep / totalSteps) * 100 + '%';
-  };
+const StepCounter = ({ currentStep, totalSteps } 
+  :{currentStep: Number;
+   totalSteps: Number}) => {
+  
 
   return (
     <div className="flex flex-col items-center ">

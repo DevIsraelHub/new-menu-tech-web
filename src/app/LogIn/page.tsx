@@ -1,16 +1,14 @@
 "use client"
 import React, { useState, useEffect } from 'react'
-import { Button } from '../ui/button'
+import { Button } from '@/components/ui/button'
 import { Label } from '@radix-ui/react-label'
-import { FacebookIcon } from 'lucide-react'
-import { Input } from '../ui/input'
-import { FaGoogle } from 'react-icons/fa'
-import { Checkbox } from '../ui/checkbox'
+import { Input } from '@/components/ui/input'
+import { Checkbox } from '@/components/ui/checkbox'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
-const LogIn = ({ onToggle }) => {
-    const [hydrated, setHydrated] = useState(false);
+const LogIn = () => {
     const [formData, setFormData] = useState({
 
         password: "",
@@ -23,13 +21,7 @@ const LogIn = ({ onToggle }) => {
 
     });
 
-    useEffect(() => {
-        setHydrated(true);
-    }, []);
-
-    if (!hydrated) {
-        return null; // Render nothing until hydrated
-    }
+    
 
 
 
@@ -66,65 +58,23 @@ const LogIn = ({ onToggle }) => {
 
     return (
 
-        <form className="w-full  relative" onSubmit={handleSubmit}>
-            <div className="bg-white mr-12  m-12 h-full border-2 border-black/30 overflow-hidden rounded-3xl flex shadow-xl">
-                {/* Image */}
+        <form className="w-full  relative h-screen overflow-hidden" onSubmit={handleSubmit}>
+            
                 <Image
                     src="/assets/coffeeshop.png"
                     width={786}
                     height={682}
                     alt="restaurant"
-                    className="w-1/3 rounded-bl-3xl hidden lg:block rounded-tl-3xl object-cover"
+                    className="w-[50%] fixed hidden lg:block h-screen object-cover"
                 />
                 {/* Form */}
-                <div className="lg:w-2/3 w-full bg-white p-6 justify-start flex flex-col sm:h-fit-content ">
+                <div className=" fixed right-0 lg:w-[50%] w-full bg-white p-6 justify-start flex flex-col sm:h-fit-content ">
 
-                    <div className="xl:px-36 py-12">
+                    <div className="xl:px-12 py-12">
                         <div className="mb-12">
                             <h4 className="font-semibold text-xl">Log In</h4>
                         </div>
-                        <div className="md:flex  gap-x-4 mb-4">
-                            <div className="md:w-1/2">
-                                <Label className="text-black">First Name</Label>
-                                <Input
-                                    type="text"
-                                    name="firstName"
-                                    value={formData.firstName}
-                                    onChange={handleChange}
-                                    placeholder="First Name"
-                                    size={12}
-                                    maxLength={50}
-                                    className="border-[1px] border-black/40 w-full h-10  rounded-md"
-                                />
-                            </div>
-                            <div className="md:w-1/2">
-                                <Label className="text-black">Last Name</Label>
-                                <Input
-                                    type="text"
-                                    name="lastName"
-                                    value={formData.lastName}
-                                    onChange={handleChange}
-                                    placeholder="Last Name"
-                                    size={12}
-                                    maxLength={50}
-                                    className="border-[1px] border-black/40 w-full h-10 rounded-md"
-                                />
-                            </div>
-                        </div>
-                        <div className="mb-4">
-                            <Label className="text-black">Phone Number</Label>
-                            <Input
-                                type="alphanumeric"
-                                maxLength={11}
-                                min={11}
-                                name="phoneNumber"
-                                value={formData.phoneNumber}
-                                onChange={handleChange}
-                                placeholder="Phone Number"
-                                size={12}
-                                className="border-[1px] border-black/40 w-full h-10 rounded-md"
-                            />
-                        </div>
+                        
                         <div className="mb-4">
                             <Label className="text-black">Email</Label>
                             <Input
@@ -207,12 +157,15 @@ const LogIn = ({ onToggle }) => {
                         <div className="text-center ">
                             <p>
                                 Dont have an account?{" "}
-                                <span className="text-blue cursor-pointer" onClick={onToggle}>Sign Up</span>
+                                <span className="text-blue cursor-pointer" >
+                                    <Link href='/Signup' className='text-orange' >
+                                    Sign Up
+                                    </Link>
+                                    </span>
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
         </form>
     )
 }

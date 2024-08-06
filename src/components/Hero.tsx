@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import { motion } from 'framer-motion';
-import { Button } from "./ui/button";
-import { fadeIn } from './variants';
-import { Icon, InstagramIcon } from "lucide-react";
-import { Twitter, Instagram, Facebook } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { fadeIn } from '@/components/variants';
 
 
 const Hero = () => {
